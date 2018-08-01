@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19124202210584880046D7C9 /* HKSCloudDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19124200210584880046D7C9 /* HKSCloudDetailViewController.swift */; };
+		19124203210584880046D7C9 /* HKSCloudDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19124201210584880046D7C9 /* HKSCloudDetailViewController.xib */; };
+		191242072105B4650046D7C9 /* HKSCloudDetailViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191242062105B4650046D7C9 /* HKSCloudDetailViewControllerCell.swift */; };
+		1912420D210815140046D7C9 /* HKSCloudMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912420B210815140046D7C9 /* HKSCloudMapViewController.swift */; };
+		1912420E210815140046D7C9 /* HKSCloudMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1912420C210815140046D7C9 /* HKSCloudMapViewController.xib */; };
+		19906BE621018EED00DED242 /* HKSCloudNeighborhoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19906BE521018EED00DED242 /* HKSCloudNeighborhoodViewController.xib */; };
+		19953AA52100995500CC6F00 /* HKSCloudCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19953AA42100995500CC6F00 /* HKSCloudCollectionViewCell.xib */; };
+		19CAE96420F36CB30003194C /* HKSCloudDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAE96320F36CB30003194C /* HKSCloudDefine.swift */; };
+		19CAE96620F4502B0003194C /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAE96520F4502B0003194C /* UIColor+Ext.swift */; };
+		19CC4F6F20E0E02F001A7303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CC4F6E20E0E02F001A7303 /* AppDelegate.swift */; };
+		19CC4F7120E0E02F001A7303 /* HKSCloudViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CC4F7020E0E02F001A7303 /* HKSCloudViewController.swift */; };
+		19CC4F7620E0E02F001A7303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CC4F7520E0E02F001A7303 /* Assets.xcassets */; };
+		19CC4F7920E0E02F001A7303 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CC4F7720E0E02F001A7303 /* LaunchScreen.storyboard */; };
+		19CC4F8320E0E4A8001A7303 /* HKSCloudCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CC4F8220E0E4A8001A7303 /* HKSCloudCollectionViewCell.swift */; };
+		19D7872820FF2D60009D8860 /* HKSCloudNeighborhoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D7872720FF2D60009D8860 /* HKSCloudNeighborhoodTableViewCell.swift */; };
+		19ED497A20FC852D00619EA4 /* HKSCloudNeighborhoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ED497920FC852D00619EA4 /* HKSCloudNeighborhoodViewController.swift */; };
+		19F34C11210FD49800381F42 /* HKSCloudViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C13210FD49800381F42 /* HKSCloudViewController.xib */; };
+		19F34C18210FD55600381F42 /* HKSCloudNeighborhoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C1A210FD55600381F42 /* HKSCloudNeighborhoodTableViewCell.xib */; };
+		19F34C1F210FD57800381F42 /* HKSCloudDetailViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C21210FD57800381F42 /* HKSCloudDetailViewControllerCell.xib */; };
+		19F34C542110621C00381F42 /* personal.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C462110621800381F42 /* personal.png */; };
+		19F34C552110621C00381F42 /* makeup.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C472110621900381F42 /* makeup.png */; };
+		19F34C562110621C00381F42 /* market.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C482110621900381F42 /* market.png */; };
+		19F34C572110621C00381F42 /* coupon.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C492110621900381F42 /* coupon.png */; };
+		19F34C582110621C00381F42 /* event3.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C4A2110621900381F42 /* event3.png */; };
+		19F34C592110621C00381F42 /* neighborhood.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C4B2110621A00381F42 /* neighborhood.png */; };
+		19F34C5A2110621C00381F42 /* coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C4C2110621A00381F42 /* coffee.png */; };
+		19F34C5B2110621C00381F42 /* event1.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C4D2110621A00381F42 /* event1.png */; };
+		19F34C5C2110621C00381F42 /* departmentStore.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C4E2110621A00381F42 /* departmentStore.png */; };
+		19F34C5D2110621C00381F42 /* creditCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C4F2110621B00381F42 /* creditCard.png */; };
+		19F34C5E2110621C00381F42 /* event2.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C502110621B00381F42 /* event2.png */; };
+		19F34C5F2110621C00381F42 /* brand.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C512110621B00381F42 /* brand.png */; };
+		19F34C602110621C00381F42 /* movie.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C522110621B00381F42 /* movie.png */; };
+		19F34C612110621C00381F42 /* restaurant.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C532110621C00381F42 /* restaurant.png */; };
+		19F34C652110706300381F42 /* AASD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F34C642110706300381F42 /* AASD.swift */; };
+		22FDB7C04049EF620D041957 /* Pods_HKSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FC95386666D2C846C78390E /* Pods_HKSCloud.framework */; };
+		282E67D320F65617006E40C9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 282E67D520F65617006E40C9 /* Localizable.strings */; };
+		282E67DB20F6716B006E40C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 282E67DD20F6716B006E40C9 /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		19105B1420FF70E200D27395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		19124200210584880046D7C9 /* HKSCloudDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKSCloudDetailViewController.swift; sourceTree = "<group>"; };
+		19124201210584880046D7C9 /* HKSCloudDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HKSCloudDetailViewController.xib; sourceTree = "<group>"; };
+		191242062105B4650046D7C9 /* HKSCloudDetailViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKSCloudDetailViewControllerCell.swift; sourceTree = "<group>"; };
+		1912420B210815140046D7C9 /* HKSCloudMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKSCloudMapViewController.swift; sourceTree = "<group>"; };
+		1912420C210815140046D7C9 /* HKSCloudMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HKSCloudMapViewController.xib; sourceTree = "<group>"; };
+		19906BE521018EED00DED242 /* HKSCloudNeighborhoodViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HKSCloudNeighborhoodViewController.xib; sourceTree = "<group>"; };
+		19953AA42100995500CC6F00 /* HKSCloudCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HKSCloudCollectionViewCell.xib; sourceTree = "<group>"; };
+		19CAE96320F36CB30003194C /* HKSCloudDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKSCloudDefine.swift; sourceTree = "<group>"; };
+		19CAE96520F4502B0003194C /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		19CC4F6B20E0E02F001A7303 /* HKSCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKSCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19CC4F6E20E0E02F001A7303 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		19CC4F7020E0E02F001A7303 /* HKSCloudViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKSCloudViewController.swift; sourceTree = "<group>"; };
+		19CC4F7520E0E02F001A7303 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19CC4F7820E0E02F001A7303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		19CC4F7A20E0E02F001A7303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19CC4F8220E0E4A8001A7303 /* HKSCloudCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKSCloudCollectionViewCell.swift; sourceTree = "<group>"; };
+		19D7872720FF2D60009D8860 /* HKSCloudNeighborhoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKSCloudNeighborhoodTableViewCell.swift; sourceTree = "<group>"; };
+		19ED497920FC852D00619EA4 /* HKSCloudNeighborhoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKSCloudNeighborhoodViewController.swift; sourceTree = "<group>"; };
+		19F34C12210FD49800381F42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HKSCloudViewController.xib; sourceTree = "<group>"; };
+		19F34C15210FD49B00381F42 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/HKSCloudViewController.strings; sourceTree = "<group>"; };
+		19F34C17210FD49D00381F42 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/HKSCloudViewController.strings"; sourceTree = "<group>"; };
+		19F34C19210FD55600381F42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HKSCloudNeighborhoodTableViewCell.xib; sourceTree = "<group>"; };
+		19F34C1C210FD55900381F42 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/HKSCloudNeighborhoodTableViewCell.strings; sourceTree = "<group>"; };
+		19F34C1E210FD55A00381F42 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/HKSCloudNeighborhoodTableViewCell.strings"; sourceTree = "<group>"; };
+		19F34C20210FD57800381F42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HKSCloudDetailViewControllerCell.xib; sourceTree = "<group>"; };
+		19F34C23210FD57A00381F42 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/HKSCloudDetailViewControllerCell.strings; sourceTree = "<group>"; };
+		19F34C25210FD57B00381F42 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/HKSCloudDetailViewControllerCell.strings"; sourceTree = "<group>"; };
+		19F34C462110621800381F42 /* personal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personal.png; sourceTree = "<group>"; };
+		19F34C472110621900381F42 /* makeup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = makeup.png; sourceTree = "<group>"; };
+		19F34C482110621900381F42 /* market.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = market.png; sourceTree = "<group>"; };
+		19F34C492110621900381F42 /* coupon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coupon.png; sourceTree = "<group>"; };
+		19F34C4A2110621900381F42 /* event3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event3.png; sourceTree = "<group>"; };
+		19F34C4B2110621A00381F42 /* neighborhood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = neighborhood.png; sourceTree = "<group>"; };
+		19F34C4C2110621A00381F42 /* coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffee.png; sourceTree = "<group>"; };
+		19F34C4D2110621A00381F42 /* event1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event1.png; sourceTree = "<group>"; };
+		19F34C4E2110621A00381F42 /* departmentStore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = departmentStore.png; sourceTree = "<group>"; };
+		19F34C4F2110621B00381F42 /* creditCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = creditCard.png; sourceTree = "<group>"; };
+		19F34C502110621B00381F42 /* event2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event2.png; sourceTree = "<group>"; };
+		19F34C512110621B00381F42 /* brand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brand.png; sourceTree = "<group>"; };
+		19F34C522110621B00381F42 /* movie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie.png; sourceTree = "<group>"; };
+		19F34C532110621C00381F42 /* restaurant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restaurant.png; sourceTree = "<group>"; };
+		19F34C642110706300381F42 /* AASD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASD.swift; sourceTree = "<group>"; };
+		282E67CF20F6557E006E40C9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		282E67D420F65617006E40C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		282E67D620F6562D006E40C9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		282E67DC20F6716B006E40C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		282E67DE20F6716D006E40C9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		85F12C8C41E174017C4E9949 /* Pods-HKSCloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKSCloud.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HKSCloud/Pods-HKSCloud.debug.xcconfig"; sourceTree = "<group>"; };
+		86B68106BF7028A2DC5430A9 /* Pods-HKSCloud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKSCloud.release.xcconfig"; path = "Pods/Target Support Files/Pods-HKSCloud/Pods-HKSCloud.release.xcconfig"; sourceTree = "<group>"; };
+		9FC95386666D2C846C78390E /* Pods_HKSCloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HKSCloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19CC4F6820E0E02F001A7303 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22FDB7C04049EF620D041957 /* Pods_HKSCloud.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19CAE95320EC5FE00003194C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				19CAE96520F4502B0003194C /* UIColor+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		19CAE95620EC6B020003194C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				19CC4F8220E0E4A8001A7303 /* HKSCloudCollectionViewCell.swift */,
+				19953AA42100995500CC6F00 /* HKSCloudCollectionViewCell.xib */,
+				19D7872720FF2D60009D8860 /* HKSCloudNeighborhoodTableViewCell.swift */,
+				19F34C1A210FD55600381F42 /* HKSCloudNeighborhoodTableViewCell.xib */,
+				191242062105B4650046D7C9 /* HKSCloudDetailViewControllerCell.swift */,
+				19F34C21210FD57800381F42 /* HKSCloudDetailViewControllerCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		19CAE95720EC6B360003194C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				19F34C2621105BB200381F42 /* Components */,
+				19CC4F7020E0E02F001A7303 /* HKSCloudViewController.swift */,
+				19F34C13210FD49800381F42 /* HKSCloudViewController.xib */,
+				19ED497920FC852D00619EA4 /* HKSCloudNeighborhoodViewController.swift */,
+				19906BE521018EED00DED242 /* HKSCloudNeighborhoodViewController.xib */,
+				19124200210584880046D7C9 /* HKSCloudDetailViewController.swift */,
+				19124201210584880046D7C9 /* HKSCloudDetailViewController.xib */,
+				1912420B210815140046D7C9 /* HKSCloudMapViewController.swift */,
+				1912420C210815140046D7C9 /* HKSCloudMapViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		19CC4F6220E0E02F001A7303 = {
+			isa = PBXGroup;
+			children = (
+				19CC4F6D20E0E02F001A7303 /* HKSCloud */,
+				A9C12160259F80820C978858 /* Frameworks */,
+				19CC4F6C20E0E02F001A7303 /* Products */,
+				99811DE7396762C96C7A5E5B /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		19CC4F6C20E0E02F001A7303 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19CC4F6B20E0E02F001A7303 /* HKSCloud.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19CC4F6D20E0E02F001A7303 /* HKSCloud */ = {
+			isa = PBXGroup;
+			children = (
+				19CC4F6E20E0E02F001A7303 /* AppDelegate.swift */,
+				19CAE96320F36CB30003194C /* HKSCloudDefine.swift */,
+				19F34C45211060D800381F42 /* Objects */,
+				19F34C442110607C00381F42 /* Vendors */,
+				19CAE95720EC6B360003194C /* ViewController */,
+				19F34C2721105E9B00381F42 /* Resources */,
+				19CAE95620EC6B020003194C /* View */,
+				19CAE95320EC5FE00003194C /* Extensions */,
+				282E67D520F65617006E40C9 /* Localizable.strings */,
+				19CC4F7720E0E02F001A7303 /* LaunchScreen.storyboard */,
+				282E67DD20F6716B006E40C9 /* InfoPlist.strings */,
+				19CC4F7520E0E02F001A7303 /* Assets.xcassets */,
+				19CC4F7A20E0E02F001A7303 /* Info.plist */,
+			);
+			path = HKSCloud;
+			sourceTree = "<group>";
+		};
+		19F34C2621105BB200381F42 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		19F34C2721105E9B00381F42 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				19F34C512110621B00381F42 /* brand.png */,
+				19F34C4C2110621A00381F42 /* coffee.png */,
+				19F34C492110621900381F42 /* coupon.png */,
+				19F34C4F2110621B00381F42 /* creditCard.png */,
+				19F34C4E2110621A00381F42 /* departmentStore.png */,
+				19F34C4D2110621A00381F42 /* event1.png */,
+				19F34C502110621B00381F42 /* event2.png */,
+				19F34C4A2110621900381F42 /* event3.png */,
+				19F34C472110621900381F42 /* makeup.png */,
+				19F34C482110621900381F42 /* market.png */,
+				19F34C522110621B00381F42 /* movie.png */,
+				19F34C4B2110621A00381F42 /* neighborhood.png */,
+				19F34C462110621800381F42 /* personal.png */,
+				19F34C532110621C00381F42 /* restaurant.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		19F34C442110607C00381F42 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		19F34C45211060D800381F42 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				19F34C642110706300381F42 /* AASD.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		99811DE7396762C96C7A5E5B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85F12C8C41E174017C4E9949 /* Pods-HKSCloud.debug.xcconfig */,
+				86B68106BF7028A2DC5430A9 /* Pods-HKSCloud.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A9C12160259F80820C978858 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FC95386666D2C846C78390E /* Pods_HKSCloud.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19CC4F6A20E0E02F001A7303 /* HKSCloud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19CC4F7D20E0E02F001A7303 /* Build configuration list for PBXNativeTarget "HKSCloud" */;
+			buildPhases = (
+				EB725813048EF971F2552CA3 /* [CP] Check Pods Manifest.lock */,
+				19CC4F6720E0E02F001A7303 /* Sources */,
+				19CC4F6820E0E02F001A7303 /* Frameworks */,
+				19CC4F6920E0E02F001A7303 /* Resources */,
+				37403DB2189DC383B68EA23A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HKSCloud;
+			productName = Bingo2;
+			productReference = 19CC4F6B20E0E02F001A7303 /* HKSCloud.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19CC4F6320E0E02F001A7303 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = softmobile;
+				TargetAttributes = {
+					19CC4F6A20E0E02F001A7303 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = AA85L9786T;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 19CC4F6620E0E02F001A7303 /* Build configuration list for PBXProject "HKSCloud" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hant",
+			);
+			mainGroup = 19CC4F6220E0E02F001A7303;
+			productRefGroup = 19CC4F6C20E0E02F001A7303 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19CC4F6A20E0E02F001A7303 /* HKSCloud */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19CC4F6920E0E02F001A7303 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19124203210584880046D7C9 /* HKSCloudDetailViewController.xib in Resources */,
+				282E67D320F65617006E40C9 /* Localizable.strings in Resources */,
+				19F34C1F210FD57800381F42 /* HKSCloudDetailViewControllerCell.xib in Resources */,
+				19953AA52100995500CC6F00 /* HKSCloudCollectionViewCell.xib in Resources */,
+				19F34C5A2110621C00381F42 /* coffee.png in Resources */,
+				19F34C592110621C00381F42 /* neighborhood.png in Resources */,
+				19F34C5F2110621C00381F42 /* brand.png in Resources */,
+				19F34C18210FD55600381F42 /* HKSCloudNeighborhoodTableViewCell.xib in Resources */,
+				19F34C572110621C00381F42 /* coupon.png in Resources */,
+				19F34C5C2110621C00381F42 /* departmentStore.png in Resources */,
+				19F34C612110621C00381F42 /* restaurant.png in Resources */,
+				1912420E210815140046D7C9 /* HKSCloudMapViewController.xib in Resources */,
+				19F34C582110621C00381F42 /* event3.png in Resources */,
+				19F34C542110621C00381F42 /* personal.png in Resources */,
+				19F34C552110621C00381F42 /* makeup.png in Resources */,
+				282E67DB20F6716B006E40C9 /* InfoPlist.strings in Resources */,
+				19F34C11210FD49800381F42 /* HKSCloudViewController.xib in Resources */,
+				19F34C602110621C00381F42 /* movie.png in Resources */,
+				19F34C5D2110621C00381F42 /* creditCard.png in Resources */,
+				19F34C5B2110621C00381F42 /* event1.png in Resources */,
+				19906BE621018EED00DED242 /* HKSCloudNeighborhoodViewController.xib in Resources */,
+				19F34C5E2110621C00381F42 /* event2.png in Resources */,
+				19CC4F7920E0E02F001A7303 /* LaunchScreen.storyboard in Resources */,
+				19F34C562110621C00381F42 /* market.png in Resources */,
+				19CC4F7620E0E02F001A7303 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37403DB2189DC383B68EA23A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HKSCloud/Pods-HKSCloud-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HKSCloud/Pods-HKSCloud-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB725813048EF971F2552CA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HKSCloud-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19CC4F6720E0E02F001A7303 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19124202210584880046D7C9 /* HKSCloudDetailViewController.swift in Sources */,
+				19CAE96420F36CB30003194C /* HKSCloudDefine.swift in Sources */,
+				19CC4F8320E0E4A8001A7303 /* HKSCloudCollectionViewCell.swift in Sources */,
+				19CAE96620F4502B0003194C /* UIColor+Ext.swift in Sources */,
+				19F34C652110706300381F42 /* AASD.swift in Sources */,
+				19CC4F7120E0E02F001A7303 /* HKSCloudViewController.swift in Sources */,
+				19CC4F6F20E0E02F001A7303 /* AppDelegate.swift in Sources */,
+				1912420D210815140046D7C9 /* HKSCloudMapViewController.swift in Sources */,
+				19D7872820FF2D60009D8860 /* HKSCloudNeighborhoodTableViewCell.swift in Sources */,
+				191242072105B4650046D7C9 /* HKSCloudDetailViewControllerCell.swift in Sources */,
+				19ED497A20FC852D00619EA4 /* HKSCloudNeighborhoodViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		19CC4F7720E0E02F001A7303 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19CC4F7820E0E02F001A7303 /* Base */,
+				282E67CF20F6557E006E40C9 /* zh-Hant */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		19F34C13210FD49800381F42 /* HKSCloudViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19F34C12210FD49800381F42 /* Base */,
+				19F34C15210FD49B00381F42 /* en */,
+				19F34C17210FD49D00381F42 /* zh-Hant */,
+			);
+			name = HKSCloudViewController.xib;
+			sourceTree = "<group>";
+		};
+		19F34C1A210FD55600381F42 /* HKSCloudNeighborhoodTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19F34C19210FD55600381F42 /* Base */,
+				19F34C1C210FD55900381F42 /* en */,
+				19F34C1E210FD55A00381F42 /* zh-Hant */,
+			);
+			name = HKSCloudNeighborhoodTableViewCell.xib;
+			sourceTree = "<group>";
+		};
+		19F34C21210FD57800381F42 /* HKSCloudDetailViewControllerCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19F34C20210FD57800381F42 /* Base */,
+				19F34C23210FD57A00381F42 /* en */,
+				19F34C25210FD57B00381F42 /* zh-Hant */,
+			);
+			name = HKSCloudDetailViewControllerCell.xib;
+			sourceTree = "<group>";
+		};
+		282E67D520F65617006E40C9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				282E67D420F65617006E40C9 /* en */,
+				282E67D620F6562D006E40C9 /* zh-Hant */,
+				19105B1420FF70E200D27395 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		282E67DD20F6716B006E40C9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				282E67DC20F6716B006E40C9 /* en */,
+				282E67DE20F6716D006E40C9 /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19CC4F7B20E0E02F001A7303 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		19CC4F7C20E0E02F001A7303 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19CC4F7E20E0E02F001A7303 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85F12C8C41E174017C4E9949 /* Pods-HKSCloud.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AA85L9786T;
+				INFOPLIST_FILE = "$(SRCROOT)/HKSCloud/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "paul-yang.Bingo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		19CC4F7F20E0E02F001A7303 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86B68106BF7028A2DC5430A9 /* Pods-HKSCloud.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AA85L9786T;
+				INFOPLIST_FILE = "$(SRCROOT)/HKSCloud/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "paul-yang.Bingo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19CC4F6620E0E02F001A7303 /* Build configuration list for PBXProject "HKSCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19CC4F7B20E0E02F001A7303 /* Debug */,
+				19CC4F7C20E0E02F001A7303 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19CC4F7D20E0E02F001A7303 /* Build configuration list for PBXNativeTarget "HKSCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19CC4F7E20E0E02F001A7303 /* Debug */,
+				19CC4F7F20E0E02F001A7303 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19CC4F6320E0E02F001A7303 /* Project object */;
+}

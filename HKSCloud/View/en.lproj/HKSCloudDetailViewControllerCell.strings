@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "好康內容:"; ObjectID = "1ex-Vy-BIb"; */
+"1ex-Vy-BIb.text" = "Content:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "FNh-Mf-iZG"; */
+"FNh-Mf-iZG.text" = "Label";
+
+/* Class = "UILabel"; text = "LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel"; ObjectID = "dj3-0M-7q2"; */
+"dj3-0M-7q2.text" = "LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "pEC-uw-S6S"; */
+"pEC-uw-S6S.text" = "Label";
+
+/* Class = "UILabel"; text = "活動時間:"; ObjectID = "wgw-f7-htR"; */
+"wgw-f7-htR.text" = "Activity time:";

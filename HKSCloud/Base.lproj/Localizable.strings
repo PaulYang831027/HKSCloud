@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Bingo
+
+  Created by PaulYang on 2018/7/11.
+  Copyright © 2018年 softmobile. All rights reserved.
+*/
+
+"Text:kHKSCloudNeighborhood" = "Nearby";
+"Text:kHKSCloudCreditCard" = "CreditCard";
+"Text:kHKSCloudPersonal" = "Personal";
+
+

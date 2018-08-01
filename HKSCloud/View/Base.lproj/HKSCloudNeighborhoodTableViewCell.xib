@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="neighborhoodCell" rowHeight="80" id="Vd5-Pv-WYF" customClass="HKSCloudNeighborhoodTableViewCell" customModule="HKSCloud" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vd5-Pv-WYF" id="Nzh-wf-Loh">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R9A-lM-6hB">
+                        <rect key="frame" x="5" y="5" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="kgD-cz-0Zf"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yj-1b-8DQ">
+                        <rect key="frame" x="80" y="19" width="334" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0cI-Ln-52N">
+                                <rect key="frame" x="0.0" y="0.0" width="238" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqh-da-QWp">
+                                <rect key="frame" x="238" y="0.0" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Y8B-Q6-43e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yf-b9-cFw">
+                                <rect key="frame" x="288" y="0.0" width="46" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="NFD-OY-KOp"/>
+                                </constraints>
+                                <state key="normal" title="地圖" image="place-marker"/>
+                                <connections>
+                                    <action selector="showShopMap:" destination="Vd5-Pv-WYF" eventType="touchUpInside" id="BZj-Bq-RmJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MbS-ZA-ulW">
+                        <rect key="frame" x="80" y="5" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="R9A-lM-6hB" secondAttribute="bottom" constant="5" id="2HF-ha-wzl"/>
+                    <constraint firstItem="R9A-lM-6hB" firstAttribute="leading" secondItem="Nzh-wf-Loh" secondAttribute="leading" constant="5" id="2T8-y4-cb1"/>
+                    <constraint firstItem="8yj-1b-8DQ" firstAttribute="leading" secondItem="R9A-lM-6hB" secondAttribute="trailing" constant="5" id="9sM-Yw-35h"/>
+                    <constraint firstItem="R9A-lM-6hB" firstAttribute="top" secondItem="Nzh-wf-Loh" secondAttribute="top" constant="5" id="AM8-I5-6WY"/>
+                    <constraint firstAttribute="bottom" secondItem="8yj-1b-8DQ" secondAttribute="bottom" constant="10" id="K5a-5C-heh"/>
+                    <constraint firstItem="MbS-ZA-ulW" firstAttribute="leading" secondItem="8yj-1b-8DQ" secondAttribute="leading" id="KiQ-Jz-1vq"/>
+                    <constraint firstItem="MbS-ZA-ulW" firstAttribute="top" secondItem="R9A-lM-6hB" secondAttribute="top" id="RtS-rH-6kZ"/>
+                    <constraint firstAttribute="trailing" secondItem="8yj-1b-8DQ" secondAttribute="trailing" id="tau-ZC-OGf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="m_ivShop" destination="R9A-lM-6hB" id="QeY-th-2hV"/>
+                <outlet property="m_lbDistance" destination="Rqh-da-QWp" id="Tr5-6G-ZxW"/>
+                <outlet property="m_lbNeighborhoodName" destination="MbS-ZA-ulW" id="tkN-k3-NSE"/>
+                <outlet property="m_lbNeighborhoodTitle" destination="0cI-Ln-52N" id="ghe-IM-F0i"/>
+            </connections>
+            <point key="canvasLocation" x="51" y="936"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="place-marker" width="50" height="50"/>
+    </resources>
+</document>

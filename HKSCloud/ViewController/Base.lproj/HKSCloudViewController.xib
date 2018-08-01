@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HKSCloudViewController" customModule="HKSCloud" customModuleProvider="target">
+            <connections>
+                <outlet property="m_aivLoading" destination="KHw-51-K9M" id="8H9-Nf-IEV"/>
+                <outlet property="m_btnBrand" destination="NrT-zT-neP" id="NGq-CW-ba0"/>
+                <outlet property="m_btnCoffee" destination="u8F-zt-rN3" id="Dzt-Wu-34Y"/>
+                <outlet property="m_btnCoupon" destination="8bB-lY-whi" id="CLs-uU-KHl"/>
+                <outlet property="m_btnDepartmentStore" destination="0VH-Oo-HQr" id="4vz-hV-QX7"/>
+                <outlet property="m_btnMakeup" destination="1VR-9u-HJI" id="KF3-9z-I1K"/>
+                <outlet property="m_btnMarket" destination="0Li-Qo-wVM" id="ilm-xy-txF"/>
+                <outlet property="m_btnMovie" destination="Jcs-lU-nm3" id="u3S-cD-JsC"/>
+                <outlet property="m_btnRestanrant" destination="TcE-5I-oJy" id="7hj-Xp-1Ij"/>
+                <outlet property="m_cvHKSCloud" destination="9mu-uG-rEJ" id="Myg-FV-H7d"/>
+                <outlet property="m_ivMarquee" destination="IAQ-6Y-Agq" id="yEE-ul-ESb"/>
+                <outlet property="m_vHKSCloud" destination="oma-U3-Cxx" id="oM1-VG-WtF"/>
+                <outlet property="m_vMask" destination="i3E-bX-mvL" id="WJf-Ct-s01"/>
+                <outlet property="view" destination="oma-U3-Cxx" id="gdk-bG-PB9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="oma-U3-Cxx">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="KHw-51-K9M">
+                    <rect key="frame" x="169" y="209.33333333333334" width="76" height="76.000000000000028"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="KHw-51-K9M" secondAttribute="height" multiplier="1:1" id="oUv-Kb-bQW"/>
+                    </constraints>
+                </activityIndicatorView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yok-D7-U9Y">
+                    <rect key="frame" x="5" y="314" width="404" height="100.33333333333331"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcE-5I-oJy">
+                            <rect key="frame" x="0.0" y="0.0" width="199.66666666666666" height="100.33333333333333"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="美食餐廳" image="restaurant">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrT-zT-neP">
+                            <rect key="frame" x="204.66666666666663" y="0.0" width="199.33333333333337" height="100.33333333333333"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="品牌推薦" image="brand">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="NrT-zT-neP" firstAttribute="width" secondItem="TcE-5I-oJy" secondAttribute="width" id="Srm-yS-eXi"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aR2-dR-CtU">
+                    <rect key="frame" x="5" y="419.33333333333331" width="404" height="100.66666666666669"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8F-zt-rN3">
+                            <rect key="frame" x="0.0" y="0.0" width="199.66666666666666" height="100.66666666666667"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="咖啡飲品" image="coffee">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0VH-Oo-HQr">
+                            <rect key="frame" x="204.66666666666663" y="0.0" width="199.33333333333337" height="100.66666666666667"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="百貨特賣" image="departmentStore">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="0VH-Oo-HQr" firstAttribute="width" secondItem="u8F-zt-rN3" secondAttribute="width" id="rMR-S0-OKK"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9V0-0b-So5">
+                    <rect key="frame" x="5" y="524.33333333333337" width="404" height="101"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bB-lY-whi">
+                            <rect key="frame" x="0.0" y="0.0" width="199.66666666666666" height="101"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="優惠卷" image="coupon">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Li-Qo-wVM">
+                            <rect key="frame" x="204.66666666666663" y="0.0" width="199.33333333333337" height="101"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="量販超市" image="market">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="0Li-Qo-wVM" firstAttribute="width" secondItem="8bB-lY-whi" secondAttribute="width" id="0Fi-ur-jHv"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="u2i-5s-2dy">
+                    <rect key="frame" x="5" y="630.66666666666663" width="404" height="100.33333333333337"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcs-lU-nm3">
+                            <rect key="frame" x="0.0" y="0.0" width="199.66666666666666" height="100.33333333333333"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="電影育樂" image="movie">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1VR-9u-HJI">
+                            <rect key="frame" x="204.66666666666663" y="0.0" width="199.33333333333337" height="100.33333333333333"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="藥妝美容" image="makeup">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="1VR-9u-HJI" firstAttribute="width" secondItem="Jcs-lU-nm3" secondAttribute="width" id="fjY-bk-Arg"/>
+                    </constraints>
+                </stackView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IAQ-6Y-Agq">
+                    <rect key="frame" x="5" y="5" width="404" height="176"/>
+                </imageView>
+                <view alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i3E-bX-mvL">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="2" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9mu-uG-rEJ" userLabel="cvBingo">
+                    <rect key="frame" x="5" y="186" width="404" height="123"/>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="9mu-uG-rEJ" secondAttribute="height" multiplier="365:111" id="i6w-1e-9LJ"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xdz-tm-mM8">
+                        <size key="itemSize" width="100" height="100"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="yd4-4W-eFt"/>
+                        <outlet property="delegate" destination="-1" id="uB5-9x-GcX"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="9mu-uG-rEJ" firstAttribute="trailing" secondItem="rtO-8o-S8d" secondAttribute="trailing" constant="-5" id="1bq-a4-PGH"/>
+                <constraint firstItem="IAQ-6Y-Agq" firstAttribute="leading" secondItem="rtO-8o-S8d" secondAttribute="leading" constant="5" id="5fP-Wx-BKG"/>
+                <constraint firstItem="9mu-uG-rEJ" firstAttribute="leading" secondItem="rtO-8o-S8d" secondAttribute="leading" constant="5" id="7xP-ow-ugq"/>
+                <constraint firstItem="9V0-0b-So5" firstAttribute="leading" secondItem="rtO-8o-S8d" secondAttribute="leading" constant="5" id="9Ax-Zi-C7m"/>
+                <constraint firstItem="9V0-0b-So5" firstAttribute="trailing" secondItem="rtO-8o-S8d" secondAttribute="trailing" constant="-5" id="9Ux-q3-VKm"/>
+                <constraint firstItem="aR2-dR-CtU" firstAttribute="height" secondItem="yok-D7-U9Y" secondAttribute="height" id="AgO-gB-EOS"/>
+                <constraint firstItem="yok-D7-U9Y" firstAttribute="top" secondItem="9mu-uG-rEJ" secondAttribute="bottom" constant="5" id="AlD-ha-plP"/>
+                <constraint firstItem="u2i-5s-2dy" firstAttribute="top" secondItem="9V0-0b-So5" secondAttribute="bottom" constant="5" id="CMJ-5D-Xf5"/>
+                <constraint firstItem="aR2-dR-CtU" firstAttribute="leading" secondItem="rtO-8o-S8d" secondAttribute="leading" constant="5" id="Cd5-S5-4UN"/>
+                <constraint firstItem="rtO-8o-S8d" firstAttribute="trailing" secondItem="IAQ-6Y-Agq" secondAttribute="trailing" constant="5" id="DEk-5f-WmH"/>
+                <constraint firstItem="rtO-8o-S8d" firstAttribute="trailing" secondItem="KHw-51-K9M" secondAttribute="trailing" constant="169" id="GmK-s7-NFP"/>
+                <constraint firstItem="yok-D7-U9Y" firstAttribute="trailing" secondItem="rtO-8o-S8d" secondAttribute="trailing" constant="-5" id="J4n-au-Wlg"/>
+                <constraint firstItem="KHw-51-K9M" firstAttribute="leading" secondItem="rtO-8o-S8d" secondAttribute="leading" constant="169" id="LBz-UU-myo"/>
+                <constraint firstItem="IAQ-6Y-Agq" firstAttribute="top" secondItem="oma-U3-Cxx" secondAttribute="top" constant="5" id="QnB-xX-cMc"/>
+                <constraint firstItem="u2i-5s-2dy" firstAttribute="height" secondItem="yok-D7-U9Y" secondAttribute="height" id="R7U-E7-VeM"/>
+                <constraint firstItem="yok-D7-U9Y" firstAttribute="leading" secondItem="rtO-8o-S8d" secondAttribute="leading" constant="5" id="Zcd-u1-4VU"/>
+                <constraint firstItem="9V0-0b-So5" firstAttribute="top" secondItem="aR2-dR-CtU" secondAttribute="bottom" constant="5" id="eKw-kc-PFP"/>
+                <constraint firstItem="u2i-5s-2dy" firstAttribute="trailing" secondItem="rtO-8o-S8d" secondAttribute="trailing" constant="-5" id="iLh-7k-wlE"/>
+                <constraint firstItem="aR2-dR-CtU" firstAttribute="top" secondItem="yok-D7-U9Y" secondAttribute="bottom" constant="5" id="kHp-FY-OtW"/>
+                <constraint firstItem="9mu-uG-rEJ" firstAttribute="top" secondItem="IAQ-6Y-Agq" secondAttribute="bottom" constant="5" id="mbq-ke-ag2"/>
+                <constraint firstItem="u2i-5s-2dy" firstAttribute="leading" secondItem="rtO-8o-S8d" secondAttribute="leading" constant="5" id="mqI-uq-h8i"/>
+                <constraint firstItem="aR2-dR-CtU" firstAttribute="trailing" secondItem="rtO-8o-S8d" secondAttribute="trailing" constant="-5" id="p7B-j1-Znq"/>
+                <constraint firstItem="9V0-0b-So5" firstAttribute="height" secondItem="yok-D7-U9Y" secondAttribute="height" id="pQl-Ud-CSb"/>
+                <constraint firstItem="KHw-51-K9M" firstAttribute="centerX" secondItem="rtO-8o-S8d" secondAttribute="centerX" id="rJC-Hb-AcL"/>
+                <constraint firstItem="KHw-51-K9M" firstAttribute="centerY" secondItem="9mu-uG-rEJ" secondAttribute="centerY" id="vSY-rH-DO4"/>
+                <constraint firstItem="rtO-8o-S8d" firstAttribute="bottom" secondItem="u2i-5s-2dy" secondAttribute="bottom" constant="5" id="vnm-Jb-KzR"/>
+                <constraint firstItem="9mu-uG-rEJ" firstAttribute="top" secondItem="rtO-8o-S8d" secondAttribute="top" constant="166" id="ydT-BS-vxP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="rtO-8o-S8d"/>
+            <point key="canvasLocation" x="47" y="53"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="brand" width="51" height="35"/>
+        <image name="coffee" width="51" height="37"/>
+        <image name="coupon" width="56" height="36"/>
+        <image name="departmentStore" width="52" height="39"/>
+        <image name="makeup" width="50" height="35"/>
+        <image name="market" width="52" height="36"/>
+        <image name="movie" width="49" height="36"/>
+        <image name="restaurant" width="55" height="42"/>
+    </resources>
+</document>

@@ -1,0 +1,24 @@
+
+/* Class = "UIButton"; normalTitle = "量販超市"; ObjectID = "0Li-Qo-wVM"; */
+"0Li-Qo-wVM.normalTitle" = "Supermarket";
+
+/* Class = "UIButton"; normalTitle = "百貨特賣"; ObjectID = "0VH-Oo-HQr"; */
+"0VH-Oo-HQr.normalTitle" = "Store";
+
+/* Class = "UIButton"; normalTitle = "藥妝美容"; ObjectID = "1VR-9u-HJI"; */
+"1VR-9u-HJI.normalTitle" = "Makeup";
+
+/* Class = "UIButton"; normalTitle = "優惠卷"; ObjectID = "8bB-lY-whi"; */
+"8bB-lY-whi.normalTitle" = "Voucher";
+
+/* Class = "UIButton"; normalTitle = "電影育樂"; ObjectID = "Jcs-lU-nm3"; */
+"Jcs-lU-nm3.normalTitle" = "Film";
+
+/* Class = "UIButton"; normalTitle = "品牌推薦"; ObjectID = "NrT-zT-neP"; */
+"NrT-zT-neP.normalTitle" = "Brand";
+
+/* Class = "UIButton"; normalTitle = "美食餐廳"; ObjectID = "TcE-5I-oJy"; */
+"TcE-5I-oJy.normalTitle" = "Restaurant";
+
+/* Class = "UIButton"; normalTitle = "咖啡飲品"; ObjectID = "u8F-zt-rN3"; */
+"u8F-zt-rN3.normalTitle" = "Coffee drink";
