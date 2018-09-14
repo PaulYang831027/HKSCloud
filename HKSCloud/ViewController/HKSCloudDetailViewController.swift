@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Kingfisher
 
 class HKSCloudDetailViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -16,20 +17,18 @@ class HKSCloudDetailViewController: UIViewController, UICollectionViewDelegate, 
     @IBOutlet var m_svHKSCloudDetail: UIScrollView!
     @IBOutlet var m_cvHKSCloudDetail: UICollectionView!
     
+    let kCellIdentifier_HKSCloudDetail = "detailCell"
     var m_eventJSON: JSON?
-    var m_iSelectShop:Int!
-    var m_shopImage: [UIImage]?
-    var m_strStartDate: String.SubSequence!
     var m_strEndDate: String.SubSequence!
     var m_aryEventUrl: String = ""
-    var data: JSON!
+    var m_strCouponUrl: String = ""
+    var m_data: JSON!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let cellNib = UINib(nibName: "HKSCloudDetailViewControllerCell", bundle: nil)
-        self.m_cvHKSCloudDetail.register(cellNib, forCellWithReuseIdentifier: "detailCell")
+        initCellNib()
         self.edgesForExtendedLayout = []
-        data = m_eventJSON!["branch"][m_iSelectShop]["event"]
+        m_data = m_eventJSON!["event"]
         if let flowLayout = m_cvHKSCloudDetail.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
         }
@@ -40,36 +39,46 @@ class HKSCloudDetailViewController: UIViewController, UICollectionViewDelegate, 
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return m_eventJSON!["branch"][m_iSelectShop]["event"].count
+        return m_data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cvCell = collectionView.dequeueReusableCell(withReuseIdentifier: kCellIdentifier_HKSCloudDetail, for: indexPath) as! HKSCloudDetailViewControllerCell
+        cvCell.delegate = self
+        cvCell.m_lbDetailName.text = m_data[indexPath.row]["title"].rawString()
+        cvCell.m_lbEventContent.text = m_data[indexPath.row]["detail"].stringValue +
+            kNotice + m_data[indexPath.row]["note"].stringValue
+        m_strEndDate = m_data[indexPath.row]["endDate"].stringValue.prefix(10)
+        cvCell.m_lbEventDate.text = (kFromNow + m_strEndDate)
+        m_aryEventUrl = m_data[indexPath.row]["eventPic"][0]["url"].stringValue
+        m_strCouponUrl = m_data[indexPath.row]["coupon"][0]["url"].stringValue
         
-        let cvCell = collectionView.dequeueReusableCell(withReuseIdentifier: "detailCell", for: indexPath) as! HKSCloudDetailViewControllerCell
-        cvCell.m_lbDetailName.text = m_eventJSON!["branch"][m_iSelectShop]["event"][indexPath.row]["title"].stringValue
-        cvCell.m_lbEventContent.text = m_eventJSON!["branch"][m_iSelectShop]["event"][indexPath.row]["detail"].stringValue
-        
-        m_strEndDate = m_eventJSON!["branch"][m_iSelectShop]["event"][indexPath.row]["endDate"].string!.prefix(10)
-        cvCell.m_lbEventDate.text = ("即日起 ~ " + m_strEndDate)
-        m_aryEventUrl = m_eventJSON!["branch"][m_iSelectShop]["event"][indexPath.row]["eventPic"][0]["url"].string!
-        
-        Alamofire.request(m_eventJSON!["branch"][m_iSelectShop]["logo"].string!).responseData { (response) in
-            if let urlData = response.data {
-                cvCell.m_ivShop.image = UIImage.init(data: urlData)
-            }
+        let m_strImageUrl = m_eventJSON!["logo"].string
+        if (m_strImageUrl != "") {
+            let url = URL(string: m_strImageUrl!)
+            cvCell.m_ivShop.kf.setImage(with: url)
+        } else {
+            cvCell.m_ivShop.image = kNoImage
         }
         
         if (m_aryEventUrl == "") {
             cvCell.m_cstrHaveImage.isActive = false
             cvCell.m_cstrNoImage.isActive = true
         } else {
-            Alamofire.request(m_aryEventUrl).responseData { (response) in
-                if let urlData = response.data {
-                    cvCell.m_cstrHaveImage.isActive = true
-                    cvCell.m_cstrNoImage.isActive = false
-                    cvCell.m_ivEvent.image = UIImage.init(data: urlData)
-                }
-            }
+            cvCell.m_cstrHaveImage.isActive = true
+            cvCell.m_cstrNoImage.isActive = false
+            let url = URL(string: m_aryEventUrl)
+            cvCell.m_ivEvent.kf.setImage(with: url)
+        }
+        
+        if (m_strCouponUrl == "") {
+            cvCell.m_cstrHaveCoupon.isActive = false
+            cvCell.m_cstrNoCoupon.isActive = true
+        } else {
+            cvCell.m_cstrHaveCoupon.isActive = true
+            cvCell.m_cstrNoCoupon.isActive = false
+            let url = URL(string: m_aryEventUrl)
+            cvCell.m_ivCoupon.kf.setImage(with: url)
         }
 
         return cvCell
@@ -80,7 +89,23 @@ class HKSCloudDetailViewController: UIViewController, UICollectionViewDelegate, 
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 40
+        return kMinimumLineSpacing
     }
     
+    func initCellNib() {
+        let cellNib = UINib(nibName: "HKSCloudDetailViewControllerCell", bundle: nil)
+        self.m_cvHKSCloudDetail.register(cellNib, forCellWithReuseIdentifier: kCellIdentifier_HKSCloudDetail)
+    }
+}
+
+extension HKSCloudDetailViewController: sendEventSelectedDelegate {
+    func sendEventSelected(index: UICollectionViewCell) {
+        let vc = HKSCloudWebViewController.init(nibName: "HKSCloudWebViewController", bundle: nil)
+        guard let selectCount = m_cvHKSCloudDetail.indexPath(for: index)?.item else {
+            return
+        }
+        vc.m_strEventUrl = m_data[selectCount]["website"].stringValue
+        print(vc.m_strEventUrl)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

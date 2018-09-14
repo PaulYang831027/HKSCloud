@@ -12,6 +12,7 @@ import SwiftyJSON
 import MapKit
 
 class HKSCloudViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITextFieldDelegate,CLLocationManagerDelegate {
+    
     //HKSCloud未使用功能
     @IBOutlet var m_btnRestanrant: UIButton!
     @IBOutlet var m_btnBrand: UIButton!
@@ -35,26 +36,18 @@ class HKSCloudViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     var m_jsonNeighborhood: JSON?
     var m_jsonCreditCard: JSON?
-    var m_jsonData: JSON?
-    var m_aryNeighborhoodImageUrl: Array<String> = []
-    var m_aryCreditCardImageUrl: Array<String> = []
-    var m_bNeighborhoodSuccess: Bool = false
-    var m_bCreditCardSuccess: Bool = false
-    var m_lat: double_t?
-    var m_lon: double_t?
-    var m_locationManager : CLLocationManager!;
-    
+    var m_lat: Double?
+    var m_lon: Double?
+	
     // MARK: - Life Cycles
     override func viewDidLoad() {
         self.initCellNib()
         self.m_cvHKSCloud.isHidden = false
         self.initBtnBorder()
         self.marqueeImages()
-        self.openLocation()
-        self.initView()
-        //self.removeUserDefault()
-        //print(m_lat)
-
+        self.stopLoading()
+        self.removeUserDefault()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,17 +57,19 @@ class HKSCloudViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
     }
     
     override func  viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         self.navigationController?.isNavigationBarHidden = false
     }
+    
     //MARK: - CollectionView
     public func collectionView(_ collectionView: UICollectionView,
                                layout collectionViewLayout: UICollectionViewLayout,
                                sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellTotalWidth = kMainWidth - (double_t(kNumber) + 1.0) * kMinimumCellSpace
+        let cellTotalWidth = Double(kMainWidth) - (double_t(kNumber) + 1.0) * kMinimumCellSpace
         let cellWidth = cellTotalWidth / double_t(kNumber)
         
         return CGSize(width: cellWidth, height: cellWidth)
@@ -100,34 +95,29 @@ class HKSCloudViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if (indexPath.item < 2) {
+        if (indexPath.item < kFeaturesCount) {
+            
             let cvCell = collectionView.cellForItem(at: indexPath) as! HKSCloudCollectionViewCell
-            let secondController = HKSCloudNeighborhoodViewController()
             
             if (0 == indexPath.item) {
                 
-                if let Neiborhood = self.m_userDefault.string(forKey: "NeiborhoodData") {
+                if let Neiborhood = self.m_userDefault.string(forKey: kUdKey_Neiborhood) {
+                    HKSCloudLocationManager.shared.getCurrent { (location) in
+                    }
+                    
                     m_jsonNeighborhood = getJSON(key: Neiborhood)
-                    secondController.m_json = m_jsonNeighborhood
-                    m_bNeighborhoodSuccess = true
-                }else {
-                    requastJSONData(dataGroup: "01")
+                    changePage(json: m_jsonNeighborhood!, datagroup: kNeighborhoodGroupCode)
+                } else {
+                    loadNeighborhood()
                 }
             } else if (1 == indexPath.item) {
-                secondController.m_json = m_jsonCreditCard
-                if let CreditCard = self.m_userDefault.string(forKey: "CreditCardData") {
+                if let CreditCard = self.m_userDefault.string(forKey: kUdKey_CreditCard) {
+        
                     m_jsonCreditCard = getJSON(key: CreditCard)
-                    secondController.m_json = m_jsonCreditCard
-                    m_bCreditCardSuccess = true
+                    changePage(json: m_jsonCreditCard!, datagroup: kCreditCardGroupCode)
                 }else {
-                    requastJSONData(dataGroup: "07")
+                    loadCredit()
                 }
-            }
-            if indexPath.item == 1 && m_bCreditCardSuccess == true {
-                self.navigationController?.pushViewController(secondController, animated: true)
-            }
-            if indexPath.item == 0 && m_bNeighborhoodSuccess == true{
-                self.navigationController?.pushViewController(secondController, animated: true)
             }
         }
         
@@ -186,126 +176,67 @@ class HKSCloudViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func removeUserDefault() {
         self.m_userDefault.removeObject(forKey: "NeiborhoodData")
-        self.m_userDefault.removeObject(forKey: "CreditCardData")
+        self.m_userDefault.removeObject(forKey: kUdKey_CreditCard)
     }
     
-    func openLocation() {
-        m_locationManager = CLLocationManager();
-        m_locationManager.delegate = self;
-        //詢問使用者是否同意給APP定位功能
-        m_locationManager.requestWhenInUseAuthorization();
-        //開始接收目前位置資訊
-        m_locationManager.startUpdatingLocation();
-        m_lat = m_locationManager.location?.coordinate.latitude
-        m_lon = m_locationManager.location?.coordinate.longitude
+    func saveJSON(json: JSON, userDefaultName: String) {
+        self.m_userDefault.set(json.rawString(), forKey: userDefaultName)
+        self.m_userDefault.synchronize()
     }
     
-    func loadingAPI() {
-        
+    func stopLoading() {
+        self.m_aivLoading.stopAnimating()
+        self.m_cvHKSCloud.isHidden = false
+        self.m_vMask.isHidden = true
     }
     
-    func loadAPIFinish() {
-//        if (self.m_bNeighborhoodSuccess == true && self.m_bCreditCardSuccess == true) {
-//            self.m_aivLoading.stopAnimating()
-//            self.m_vMask.isHidden = true
-//            self.m_cvHKSCloud.isHidden = false
-//        }
+    func startLoading() {
+        self.m_aivLoading.startAnimating()
+        self.m_cvHKSCloud.isHidden = true
+        self.m_vMask.isHidden = false
     }
     
-    func  requastJSONData(dataGroup: String) {
-        HTTPClient.getEventService(primaryCategory: <#T##String#>)
-        m_jsonData = JSON()
-        m_jsonData!["appId"].stringValue = kAppID
-        m_jsonData!["dataGroupCode"].stringValue = kNeighborhoodGroupCode
-        m_jsonData!["primaryCategory"].stringValue = kPrimaryCategory
-        m_jsonData!["secondaryCategory"].stringValue = kSecondaryCategory
-        m_jsonData!["index"].stringValue = kIndex
-        m_jsonData!["limit"].stringValue = kLimit
-        m_jsonData!["OS"].stringValue = kOS
-        m_jsonData!["OSVersion"].stringValue = kOSVersion
-        m_jsonData!["macAddress"].stringValue = kMacAddress
-        m_jsonData!["deviceName"].stringValue = kDeviceName
-        m_jsonData!["width"].stringValue = kWidth
-        m_jsonData!["height"].stringValue = kHeight
-        m_jsonData!["deviceIdforVendor"].stringValue = kDeviceIdforVendor
-        
-        let characterSet = CharacterSet(charactersIn: "Optional()")
-        if String(describing: m_lat) != "nil" {
-            m_jsonData!["lat"].stringValue = String(describing: m_lat).trimmingCharacters(in: characterSet)
-            m_jsonData!["lon"].stringValue = String(describing: m_lon).trimmingCharacters(in: characterSet)
-        } else {
-            m_jsonData!["lat"].stringValue = kLat
-            m_jsonData!["lon"].stringValue = kLon
+    func changePage(json: JSON, datagroup: String) {
+        let secondController = HKSCloudNeighborhoodViewController()
+        secondController.m_json = json
+        secondController.m_strDatagroup = datagroup
+        self.navigationController?.pushViewController(secondController, animated: true)
+    }
+    
+    func makeSureLocation(location: CLLocation) {
+        m_lat = location.coordinate.latitude
+        m_lon = location.coordinate.longitude
+        locationNil()
+    }
+    
+    func locationNil() {
+        if m_lat == nil {
+            m_lat = kLat
+            m_lon = kLon
         }
-        
-        let url = URL.init(string: kHKSCloudURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
-        Alamofire.request(url!, parameters: m_jsonData?.dictionary).responseJSON(completionHandler: { response in
-            if response.result.isSuccess {
-                do {
-                    self.m_jsonData = try JSON(data: response.data!)
-                    print(self.m_jsonData)
-//                    if let result = self.m_jsonCreditCard!["branch"].array {
-//                        for data in result {
-//                            self.m_aryCreditCardImageUrl.append(data["logo"].stringValue)
-//                        }
-//                    }
-                    
-                } catch {
-                    print("error: \(String(describing: response.error))")
-                }
-
-            } else {
-                print("error: \(String(describing: response.error))")
-            }
-            if dataGroup == kCreditCardGroupCode {
-                print("信用卡優惠完成")
-                self.m_bCreditCardSuccess = true
-                self.m_jsonCreditCard = self.m_jsonData
-                self.m_userDefault.set(self.m_jsonCreditCard?.rawString(), forKey: "CreditCardData")
-                self.m_userDefault.set(self.m_aryCreditCardImageUrl, forKey: "CreditCardImageUrl")
-            } else if dataGroup == kNeighborhoodGroupCode {
-                print("附近優惠完成")
-                self.m_bNeighborhoodSuccess = true
-                self.m_jsonNeighborhood = self.m_jsonData
-                self.m_userDefault.set(self.m_jsonData?.rawString(), forKey: "NeiborhoodData")
-                self.m_userDefault.set(self.m_aryNeighborhoodImageUrl, forKey: "NeiborhoodImageUrl")
-            }
-            self.m_userDefault.synchronize()
+    }
+    
+    func loadCredit() {
+        startLoading()
+        locationNil()
+        HKSCloudHttpClient.eventSearch(dataGroup: kCreditCardGroupCode, lat: self.m_lat!, lon: self.m_lon!, callback: { (content) in
+            
+            self.stopLoading()
+            self.saveJSON(json: content, userDefaultName: kUdKey_CreditCard)
+            self.changePage(json: content, datagroup: kCreditCardGroupCode)
         })
     }
     
-    func initView() {
-        m_vMask.isHidden = true
-        m_aivLoading.stopAnimating()
-        m_cvHKSCloud.isHidden = false
-    }
-}
-
-class HTTPClient {
-    
-    
-//    private func...
-    func postReq() {
-        
-    }
-}
-
-extension JSON {
-    func addCommonData() {
-        self["width"].string = UIScreen.main.bounds.width
-    }
-}
-
-extension HTTPClient {
-    //public func
-    
-    static func getEventService(primaryCategory:String) {
-        var value = JSON()
-        
-        value.addCommonData()
-        
-        value = self.addCommonData(value)
-        
-        self.postReq()
+    func loadNeighborhood() {
+        startLoading()
+        HKSCloudLocationManager.shared.getCurrent { (location) in
+            print(location.coordinate)
+            self.makeSureLocation(location: location)
+            HKSCloudHttpClient.eventSearch(dataGroup: kNeighborhoodGroupCode, lat: self.m_lat!, lon: self.m_lon!, callback: { (content) in
+                self.stopLoading()
+                self.saveJSON(json: content, userDefaultName: kUdKey_Neiborhood)
+                self.changePage(json: content, datagroup: kNeighborhoodGroupCode)
+            })
+        }
     }
 }

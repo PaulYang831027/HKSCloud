@@ -7,16 +7,17 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        
         let page = HKSCloudViewController(nibName: "HKSCloudViewController", bundle: nil)
         let nav = UINavigationController.init(rootViewController: page)
         nav.navigationBar.isTranslucent = false
@@ -24,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         nav.isToolbarHidden = true
         self.window?.makeKeyAndVisible()
         
+        HKSCloudLocationManager.shared.getCurrent { (location) in
+            print(location.coordinate)
+        }
+    
         return true
     }
 

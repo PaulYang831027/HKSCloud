@@ -11,7 +11,6 @@ import UIKit
 protocol sendSelectRowDelegate {
     func sendSelectRow(index: UITableViewCell)
 }
-
 class HKSCloudNeighborhoodTableViewCell: UITableViewCell {
     @IBOutlet var m_lbDistance: UILabel!
     @IBOutlet var m_ivShop: UIImageView!

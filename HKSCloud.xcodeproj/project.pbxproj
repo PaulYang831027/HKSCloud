@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190EFC1D2111689B0081EF9E /* HKSCloudHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190EFC1C2111689B0081EF9E /* HKSCloudHttpClient.swift */; };
 		19124202210584880046D7C9 /* HKSCloudDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19124200210584880046D7C9 /* HKSCloudDetailViewController.swift */; };
 		19124203210584880046D7C9 /* HKSCloudDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19124201210584880046D7C9 /* HKSCloudDetailViewController.xib */; };
 		191242072105B4650046D7C9 /* HKSCloudDetailViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191242062105B4650046D7C9 /* HKSCloudDetailViewControllerCell.swift */; };
 		1912420D210815140046D7C9 /* HKSCloudMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912420B210815140046D7C9 /* HKSCloudMapViewController.swift */; };
 		1912420E210815140046D7C9 /* HKSCloudMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1912420C210815140046D7C9 /* HKSCloudMapViewController.xib */; };
+		19599544211C12D20056302A /* nopic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 19599543211C12D20056302A /* nopic.jpg */; };
 		19906BE621018EED00DED242 /* HKSCloudNeighborhoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19906BE521018EED00DED242 /* HKSCloudNeighborhoodViewController.xib */; };
 		19953AA52100995500CC6F00 /* HKSCloudCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19953AA42100995500CC6F00 /* HKSCloudCollectionViewCell.xib */; };
+		199E83C821193A680035C666 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199E83C721193A680035C666 /* UIApplicationExtension.swift */; };
 		19CAE96420F36CB30003194C /* HKSCloudDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAE96320F36CB30003194C /* HKSCloudDefine.swift */; };
 		19CAE96620F4502B0003194C /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CAE96520F4502B0003194C /* UIColor+Ext.swift */; };
 		19CC4F6F20E0E02F001A7303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CC4F6E20E0E02F001A7303 /* AppDelegate.swift */; };
@@ -30,31 +33,35 @@
 		19F34C552110621C00381F42 /* makeup.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C472110621900381F42 /* makeup.png */; };
 		19F34C562110621C00381F42 /* market.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C482110621900381F42 /* market.png */; };
 		19F34C572110621C00381F42 /* coupon.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C492110621900381F42 /* coupon.png */; };
-		19F34C582110621C00381F42 /* event3.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C4A2110621900381F42 /* event3.png */; };
 		19F34C592110621C00381F42 /* neighborhood.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C4B2110621A00381F42 /* neighborhood.png */; };
 		19F34C5A2110621C00381F42 /* coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C4C2110621A00381F42 /* coffee.png */; };
-		19F34C5B2110621C00381F42 /* event1.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C4D2110621A00381F42 /* event1.png */; };
 		19F34C5C2110621C00381F42 /* departmentStore.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C4E2110621A00381F42 /* departmentStore.png */; };
 		19F34C5D2110621C00381F42 /* creditCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C4F2110621B00381F42 /* creditCard.png */; };
-		19F34C5E2110621C00381F42 /* event2.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C502110621B00381F42 /* event2.png */; };
 		19F34C5F2110621C00381F42 /* brand.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C512110621B00381F42 /* brand.png */; };
 		19F34C602110621C00381F42 /* movie.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C522110621B00381F42 /* movie.png */; };
 		19F34C612110621C00381F42 /* restaurant.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F34C532110621C00381F42 /* restaurant.png */; };
-		19F34C652110706300381F42 /* AASD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F34C642110706300381F42 /* AASD.swift */; };
+		19F34C652110706300381F42 /* HKSCloudLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F34C642110706300381F42 /* HKSCloudLocationManager.swift */; };
+		19FC91F72117611300B331BC /* HKSCloudWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC91F52117611300B331BC /* HKSCloudWebViewController.swift */; };
+		19FC91F82117611300B331BC /* HKSCloudWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19FC91F62117611300B331BC /* HKSCloudWebViewController.xib */; };
 		22FDB7C04049EF620D041957 /* Pods_HKSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FC95386666D2C846C78390E /* Pods_HKSCloud.framework */; };
 		282E67D320F65617006E40C9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 282E67D520F65617006E40C9 /* Localizable.strings */; };
 		282E67DB20F6716B006E40C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 282E67DD20F6716B006E40C9 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		190EFC1C2111689B0081EF9E /* HKSCloudHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKSCloudHttpClient.swift; sourceTree = "<group>"; };
 		19105B1420FF70E200D27395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		19124200210584880046D7C9 /* HKSCloudDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKSCloudDetailViewController.swift; sourceTree = "<group>"; };
 		19124201210584880046D7C9 /* HKSCloudDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HKSCloudDetailViewController.xib; sourceTree = "<group>"; };
 		191242062105B4650046D7C9 /* HKSCloudDetailViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKSCloudDetailViewControllerCell.swift; sourceTree = "<group>"; };
 		1912420B210815140046D7C9 /* HKSCloudMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKSCloudMapViewController.swift; sourceTree = "<group>"; };
 		1912420C210815140046D7C9 /* HKSCloudMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HKSCloudMapViewController.xib; sourceTree = "<group>"; };
+		19599543211C12D20056302A /* nopic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = nopic.jpg; path = ../../../nopic.jpg; sourceTree = "<group>"; };
+		1974D0582112E5B6006CC5B5 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		1974D0592112F2BC006CC5B5 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		19906BE521018EED00DED242 /* HKSCloudNeighborhoodViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HKSCloudNeighborhoodViewController.xib; sourceTree = "<group>"; };
 		19953AA42100995500CC6F00 /* HKSCloudCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HKSCloudCollectionViewCell.xib; sourceTree = "<group>"; };
+		199E83C721193A680035C666 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		19CAE96320F36CB30003194C /* HKSCloudDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKSCloudDefine.swift; sourceTree = "<group>"; };
 		19CAE96520F4502B0003194C /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		19CC4F6B20E0E02F001A7303 /* HKSCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKSCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,17 +86,16 @@
 		19F34C472110621900381F42 /* makeup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = makeup.png; sourceTree = "<group>"; };
 		19F34C482110621900381F42 /* market.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = market.png; sourceTree = "<group>"; };
 		19F34C492110621900381F42 /* coupon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coupon.png; sourceTree = "<group>"; };
-		19F34C4A2110621900381F42 /* event3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event3.png; sourceTree = "<group>"; };
 		19F34C4B2110621A00381F42 /* neighborhood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = neighborhood.png; sourceTree = "<group>"; };
 		19F34C4C2110621A00381F42 /* coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffee.png; sourceTree = "<group>"; };
-		19F34C4D2110621A00381F42 /* event1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event1.png; sourceTree = "<group>"; };
 		19F34C4E2110621A00381F42 /* departmentStore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = departmentStore.png; sourceTree = "<group>"; };
 		19F34C4F2110621B00381F42 /* creditCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = creditCard.png; sourceTree = "<group>"; };
-		19F34C502110621B00381F42 /* event2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event2.png; sourceTree = "<group>"; };
 		19F34C512110621B00381F42 /* brand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brand.png; sourceTree = "<group>"; };
 		19F34C522110621B00381F42 /* movie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie.png; sourceTree = "<group>"; };
 		19F34C532110621C00381F42 /* restaurant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restaurant.png; sourceTree = "<group>"; };
-		19F34C642110706300381F42 /* AASD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AASD.swift; sourceTree = "<group>"; };
+		19F34C642110706300381F42 /* HKSCloudLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKSCloudLocationManager.swift; sourceTree = "<group>"; };
+		19FC91F52117611300B331BC /* HKSCloudWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKSCloudWebViewController.swift; sourceTree = "<group>"; };
+		19FC91F62117611300B331BC /* HKSCloudWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HKSCloudWebViewController.xib; sourceTree = "<group>"; };
 		282E67CF20F6557E006E40C9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		282E67D420F65617006E40C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		282E67D620F6562D006E40C9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -115,22 +121,10 @@
 		19CAE95320EC5FE00003194C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				199E83C721193A680035C666 /* UIApplicationExtension.swift */,
 				19CAE96520F4502B0003194C /* UIColor+Ext.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		19CAE95620EC6B020003194C /* View */ = {
-			isa = PBXGroup;
-			children = (
-				19CC4F8220E0E4A8001A7303 /* HKSCloudCollectionViewCell.swift */,
-				19953AA42100995500CC6F00 /* HKSCloudCollectionViewCell.xib */,
-				19D7872720FF2D60009D8860 /* HKSCloudNeighborhoodTableViewCell.swift */,
-				19F34C1A210FD55600381F42 /* HKSCloudNeighborhoodTableViewCell.xib */,
-				191242062105B4650046D7C9 /* HKSCloudDetailViewControllerCell.swift */,
-				19F34C21210FD57800381F42 /* HKSCloudDetailViewControllerCell.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		19CAE95720EC6B360003194C /* ViewController */ = {
@@ -145,6 +139,8 @@
 				19124201210584880046D7C9 /* HKSCloudDetailViewController.xib */,
 				1912420B210815140046D7C9 /* HKSCloudMapViewController.swift */,
 				1912420C210815140046D7C9 /* HKSCloudMapViewController.xib */,
+				19FC91F52117611300B331BC /* HKSCloudWebViewController.swift */,
+				19FC91F62117611300B331BC /* HKSCloudWebViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -173,16 +169,16 @@
 				19CC4F6E20E0E02F001A7303 /* AppDelegate.swift */,
 				19CAE96320F36CB30003194C /* HKSCloudDefine.swift */,
 				19F34C45211060D800381F42 /* Objects */,
-				19F34C442110607C00381F42 /* Vendors */,
 				19CAE95720EC6B360003194C /* ViewController */,
 				19F34C2721105E9B00381F42 /* Resources */,
-				19CAE95620EC6B020003194C /* View */,
 				19CAE95320EC5FE00003194C /* Extensions */,
 				282E67D520F65617006E40C9 /* Localizable.strings */,
 				19CC4F7720E0E02F001A7303 /* LaunchScreen.storyboard */,
 				282E67DD20F6716B006E40C9 /* InfoPlist.strings */,
 				19CC4F7520E0E02F001A7303 /* Assets.xcassets */,
 				19CC4F7A20E0E02F001A7303 /* Info.plist */,
+				1974D0582112E5B6006CC5B5 /* Header.h */,
+				1974D0592112F2BC006CC5B5 /* Location.gpx */,
 			);
 			path = HKSCloud;
 			sourceTree = "<group>";
@@ -190,6 +186,12 @@
 		19F34C2621105BB200381F42 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				19CC4F8220E0E4A8001A7303 /* HKSCloudCollectionViewCell.swift */,
+				19953AA42100995500CC6F00 /* HKSCloudCollectionViewCell.xib */,
+				19D7872720FF2D60009D8860 /* HKSCloudNeighborhoodTableViewCell.swift */,
+				19F34C1A210FD55600381F42 /* HKSCloudNeighborhoodTableViewCell.xib */,
+				191242062105B4650046D7C9 /* HKSCloudDetailViewControllerCell.swift */,
+				19F34C21210FD57800381F42 /* HKSCloudDetailViewControllerCell.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -197,14 +199,12 @@
 		19F34C2721105E9B00381F42 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				19599543211C12D20056302A /* nopic.jpg */,
 				19F34C512110621B00381F42 /* brand.png */,
 				19F34C4C2110621A00381F42 /* coffee.png */,
 				19F34C492110621900381F42 /* coupon.png */,
 				19F34C4F2110621B00381F42 /* creditCard.png */,
 				19F34C4E2110621A00381F42 /* departmentStore.png */,
-				19F34C4D2110621A00381F42 /* event1.png */,
-				19F34C502110621B00381F42 /* event2.png */,
-				19F34C4A2110621900381F42 /* event3.png */,
 				19F34C472110621900381F42 /* makeup.png */,
 				19F34C482110621900381F42 /* market.png */,
 				19F34C522110621B00381F42 /* movie.png */,
@@ -215,17 +215,11 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		19F34C442110607C00381F42 /* Vendors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Vendors;
-			sourceTree = "<group>";
-		};
 		19F34C45211060D800381F42 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				19F34C642110706300381F42 /* AASD.swift */,
+				19F34C642110706300381F42 /* HKSCloudLocationManager.swift */,
+				190EFC1C2111689B0081EF9E /* HKSCloudHttpClient.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -284,6 +278,17 @@
 						DevelopmentTeam = AA85L9786T;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+							com.apple.WAC = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -311,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19FC91F82117611300B331BC /* HKSCloudWebViewController.xib in Resources */,
 				19124203210584880046D7C9 /* HKSCloudDetailViewController.xib in Resources */,
 				282E67D320F65617006E40C9 /* Localizable.strings in Resources */,
 				19F34C1F210FD57800381F42 /* HKSCloudDetailViewControllerCell.xib in Resources */,
@@ -319,20 +325,18 @@
 				19F34C592110621C00381F42 /* neighborhood.png in Resources */,
 				19F34C5F2110621C00381F42 /* brand.png in Resources */,
 				19F34C18210FD55600381F42 /* HKSCloudNeighborhoodTableViewCell.xib in Resources */,
+				19599544211C12D20056302A /* nopic.jpg in Resources */,
 				19F34C572110621C00381F42 /* coupon.png in Resources */,
 				19F34C5C2110621C00381F42 /* departmentStore.png in Resources */,
 				19F34C612110621C00381F42 /* restaurant.png in Resources */,
 				1912420E210815140046D7C9 /* HKSCloudMapViewController.xib in Resources */,
-				19F34C582110621C00381F42 /* event3.png in Resources */,
 				19F34C542110621C00381F42 /* personal.png in Resources */,
 				19F34C552110621C00381F42 /* makeup.png in Resources */,
 				282E67DB20F6716B006E40C9 /* InfoPlist.strings in Resources */,
 				19F34C11210FD49800381F42 /* HKSCloudViewController.xib in Resources */,
 				19F34C602110621C00381F42 /* movie.png in Resources */,
 				19F34C5D2110621C00381F42 /* creditCard.png in Resources */,
-				19F34C5B2110621C00381F42 /* event1.png in Resources */,
 				19906BE621018EED00DED242 /* HKSCloudNeighborhoodViewController.xib in Resources */,
-				19F34C5E2110621C00381F42 /* event2.png in Resources */,
 				19CC4F7920E0E02F001A7303 /* LaunchScreen.storyboard in Resources */,
 				19F34C562110621C00381F42 /* market.png in Resources */,
 				19CC4F7620E0E02F001A7303 /* Assets.xcassets in Resources */,
@@ -350,11 +354,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HKSCloud/Pods-HKSCloud-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,13 +398,16 @@
 				19124202210584880046D7C9 /* HKSCloudDetailViewController.swift in Sources */,
 				19CAE96420F36CB30003194C /* HKSCloudDefine.swift in Sources */,
 				19CC4F8320E0E4A8001A7303 /* HKSCloudCollectionViewCell.swift in Sources */,
+				190EFC1D2111689B0081EF9E /* HKSCloudHttpClient.swift in Sources */,
 				19CAE96620F4502B0003194C /* UIColor+Ext.swift in Sources */,
-				19F34C652110706300381F42 /* AASD.swift in Sources */,
+				19F34C652110706300381F42 /* HKSCloudLocationManager.swift in Sources */,
 				19CC4F7120E0E02F001A7303 /* HKSCloudViewController.swift in Sources */,
 				19CC4F6F20E0E02F001A7303 /* AppDelegate.swift in Sources */,
+				19FC91F72117611300B331BC /* HKSCloudWebViewController.swift in Sources */,
 				1912420D210815140046D7C9 /* HKSCloudMapViewController.swift in Sources */,
 				19D7872820FF2D60009D8860 /* HKSCloudNeighborhoodTableViewCell.swift in Sources */,
 				191242072105B4650046D7C9 /* HKSCloudDetailViewControllerCell.swift in Sources */,
+				199E83C821193A680035C666 /* UIApplicationExtension.swift in Sources */,
 				19ED497A20FC852D00619EA4 /* HKSCloudNeighborhoodViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,7 +594,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AA85L9786T;
 				INFOPLIST_FILE = "$(SRCROOT)/HKSCloud/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "paul-yang.Bingo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -598,7 +608,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AA85L9786T;
 				INFOPLIST_FILE = "$(SRCROOT)/HKSCloud/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "paul-yang.Bingo";
 				PRODUCT_NAME = "$(TARGET_NAME)";

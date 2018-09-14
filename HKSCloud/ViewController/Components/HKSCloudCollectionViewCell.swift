@@ -12,8 +12,6 @@ class HKSCloudCollectionViewCell: UICollectionViewCell {
     @IBOutlet var m_lbName: UILabel!
     @IBOutlet var m_ivFeatures: UIImageView!
     
-    
-    
     func initView() {
         self.m_lbName.text = ""
     }
